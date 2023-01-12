@@ -6,7 +6,12 @@ export const NavBar = () => {
   return (
     <div>
       <Link to="/">Home</Link>
-      <Link to="/login">Login</Link>
+      {!user ? (
+        <Link to="/login">Login</Link>
+      ) : (
+        <Link to="/createPost">Create Post </Link>
+      )}
+      {/* <Link to="/createPost">Create Post </Link> */}
       <div>
         <p>User name: {user?.email}</p>
       </div>
