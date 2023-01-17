@@ -22,7 +22,7 @@ export const Main = () => {
   useEffect(() => {
     getPosts();
   }, []);
-  getPosts();
+  // getPosts();
   return (
     <h1>
       {postsList?.map((post) => (
